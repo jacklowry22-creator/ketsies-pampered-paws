@@ -1,4 +1,4 @@
-import { useReveal } from "@/hooks/use-reveal";
+import { Reveal } from "@/components/Reveal";
 import { Check, Phone } from "lucide-react";
 
 const services = [
@@ -95,12 +95,10 @@ export function Services() {
 
         <div className="grid md:grid-cols-2 gap-6">
           {services.map((s) => {
-            const ref = useReveal<HTMLDivElement>();
             return (
-              <div
+              <Reveal
                 key={s.name}
-                ref={ref}
-                className={`reveal relative rounded-3xl p-8 md:p-10 border transition-all duration-500 hover:-translate-y-1 ${
+                className={`relative rounded-3xl p-8 md:p-10 border transition-all duration-500 hover:-translate-y-1 ${
                   s.featured
                     ? "bg-gradient-gold text-charcoal border-gold md:col-span-2 shadow-gold"
                     : "bg-cream/[0.03] border-gold/15 hover:border-gold/40"
@@ -130,7 +128,7 @@ export function Services() {
                     ))}
                   </ul>
                 )}
-              </div>
+              </Reveal>
             );
           })}
         </div>

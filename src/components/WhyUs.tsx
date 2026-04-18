@@ -1,4 +1,4 @@
-import { useReveal } from "@/hooks/use-reveal";
+import { Reveal } from "@/components/Reveal";
 import { Heart, Clock, Sparkles, Gift, Trees } from "lucide-react";
 
 const items = [
@@ -46,23 +46,21 @@ export function WhyUs() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {items.map((item, i) => {
-            const ref = useReveal<HTMLDivElement>();
             const Icon = item.icon;
             return (
-              <div
+              <Reveal
                 key={item.title}
-                ref={ref}
-                className={`reveal group relative bg-cream/[0.03] backdrop-blur-sm border border-gold/15 rounded-3xl p-8 hover:border-gold/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-gold ${
+                delay={i * 0.05}
+                className={`group relative bg-cream/[0.03] backdrop-blur-sm border border-gold/15 rounded-3xl p-8 hover:border-gold/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-gold ${
                   i === 4 ? "lg:col-start-2" : ""
                 }`}
-                style={{ transitionDelay: `${i * 0.05}s` }}
               >
                 <div className="w-14 h-14 rounded-2xl bg-gradient-gold flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <Icon className="w-7 h-7 text-charcoal" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-display text-2xl mb-3 text-cream">{item.title}</h3>
                 <p className="text-cream/70 text-sm leading-relaxed">{item.body}</p>
-              </div>
+              </Reveal>
             );
           })}
         </div>

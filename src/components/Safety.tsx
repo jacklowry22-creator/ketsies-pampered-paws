@@ -1,4 +1,5 @@
 import { useReveal } from "@/hooks/use-reveal";
+import { Reveal } from "@/components/Reveal";
 import { ShieldCheck, Home, HandHeart, Sparkles } from "lucide-react";
 
 const pledges = [
@@ -42,10 +43,9 @@ export function Safety() {
 
         <div className="grid md:grid-cols-2 gap-6">
           {pledges.map((p) => {
-            const r = useReveal<HTMLDivElement>();
             const Icon = p.icon;
             return (
-              <div key={p.title} ref={r} className="reveal flex gap-5 bg-card border border-border rounded-2xl p-7 hover:shadow-luxe transition-shadow">
+              <Reveal key={p.title} className="flex gap-5 bg-card border border-border rounded-2xl p-7 hover:shadow-luxe transition-shadow">
                 <div className="shrink-0 w-12 h-12 rounded-xl bg-charcoal flex items-center justify-center">
                   <Icon className="w-6 h-6 text-gold" strokeWidth={1.5} />
                 </div>
@@ -53,7 +53,7 @@ export function Safety() {
                   <h3 className="font-display text-xl text-charcoal mb-2">{p.title}</h3>
                   <p className="text-charcoal/70 text-sm leading-relaxed">{p.body}</p>
                 </div>
-              </div>
+              </Reveal>
             );
           })}
         </div>

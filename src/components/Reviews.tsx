@@ -22,27 +22,24 @@ export function Reviews() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {reviews.map((r, i) => {
-            const ref = useReveal<HTMLDivElement>();
-            return (
-              <figure
-                key={i}
-                ref={ref}
-                className="reveal relative bg-cream/[0.03] border border-gold/15 rounded-3xl p-8 hover:border-gold/40 transition-colors"
-                style={{ transitionDelay: `${i * 0.05}s` }}
-              >
-                <div className="flex gap-1 text-gold mb-4">
-                  {"★★★★★".split("").map((s, idx) => <span key={idx}>{s}</span>)}
-                </div>
-                <blockquote className="font-serif italic text-cream/90 text-lg leading-relaxed">
-                  "{r.text}"
-                </blockquote>
-                <figcaption className="mt-6 text-gold uppercase tracking-widest text-xs">
-                  — {r.name}{r.loc ? `, ${r.loc}` : ""}
-                </figcaption>
-              </figure>
-            );
-          })}
+          {reviews.map((r, i) => (
+            <Reveal
+              key={i}
+              as="figure"
+              delay={i * 0.05}
+              className="relative bg-cream/[0.03] border border-gold/15 rounded-3xl p-8 hover:border-gold/40 transition-colors"
+            >
+              <div className="flex gap-1 text-gold mb-4">
+                {"★★★★★".split("").map((s, idx) => <span key={idx}>{s}</span>)}
+              </div>
+              <blockquote className="font-serif italic text-cream/90 text-lg leading-relaxed">
+                "{r.text}"
+              </blockquote>
+              <figcaption className="mt-6 text-gold uppercase tracking-widest text-xs">
+                — {r.name}{r.loc ? `, ${r.loc}` : ""}
+              </figcaption>
+            </Reveal>
+          ))}
         </div>
       </div>
     </section>
