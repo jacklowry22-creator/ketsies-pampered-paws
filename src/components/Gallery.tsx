@@ -9,16 +9,14 @@ import dogBernese from "@/assets/dog-bernese.jpg";
 import puppyHaircut from "@/assets/puppy-first-haircut.jpg";
 import dogBandanaDeck from "@/assets/dog-bandana-deck.jpg";
 
+// 3-col grid, 2 rows. Bottom-left replaced with the new puppy first-haircut photo.
 const photos = [
   { src: dogBackyard, alt: "Golden retriever enjoying the lush, private backyard" },
   { src: dogCavapoo, alt: "Cavapoo posing on the grooming table with a handmade floral bandana" },
-  { src: dogDachshund, alt: "Long-haired dachshund freshly groomed" },
-  { src: coletteBailey, alt: "Colette sharing a sweet moment with Bailey the golden retriever" },
+  { src: dogBernese, alt: "Bernese mountain dog dressed up with a handmade pink bow" },
   { src: puppyHaircut, alt: "Cavapoo puppy after a gentle first haircut at Ketsie's" },
-  { src: dogBath, alt: "Golden retriever in the stainless spa tub" },
-  { src: dogBernese, alt: "Bernese mountain dog with a handmade pink bow at Ketsie's studio" },
-  { src: dogBandanaDeck, alt: "Freshly groomed pup wearing a handmade red polka-dot bandana" },
-  { src: puppyHaircut, alt: "Cavapoo puppy first haircut" },
+  { src: dogBandanaDeck, alt: "Freshly groomed pup wearing a handmade red polka-dot bandana on the deck" },
+  { src: dogDachshund, alt: "Long-haired dachshund freshly groomed" },
 ];
 
 export function Gallery() {
