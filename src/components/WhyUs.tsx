@@ -1,11 +1,11 @@
 import { Reveal } from "@/components/Reveal";
-import { Heart, Clock, Sparkles, Gift, Trees } from "lucide-react";
+import { Heart, Clock, Sparkles, Gift, Trees, PawPrint } from "lucide-react";
 
 const items = [
   {
     icon: Heart,
     title: "True One-on-One Care",
-    body: "Your dog is the star! We never kennel or stack dogs. Colette's full attention is dedicated to your pet throughout their entire session. Work starts immediately when your dog arrives — no waiting in a cage.",
+    body: "Your dog is the star! We offer dedicated one-on-one sessions by request — perfect for nervous, anxious, or senior dogs. While we typically manage appointments to keep our studio quiet, these dedicated solo sessions ensure your pup is the only dog in the room during their groom. Please request this at the time of booking!",
   },
   {
     icon: Clock,
@@ -26,6 +26,11 @@ const items = [
     icon: Trees,
     title: "Relaxing Backyard Cooldown",
     body: "Our fully fenced, private backyard provides a safe, gorgeous space for dogs to play and relax while they wait for pickup — koi pond, gardens, and all.",
+  },
+  {
+    icon: PawPrint,
+    title: "A Passion for Paws",
+    body: "Every pup we groom leaves with a beautiful, handmade bandana or bowtie, lovingly crafted by Colette herself — a special keepsake from their visit!",
   },
 ];
 
@@ -51,9 +56,7 @@ export function WhyUs() {
               <Reveal
                 key={item.title}
                 delay={i * 0.05}
-                className={`group relative bg-cream/[0.03] backdrop-blur-sm border border-gold/15 rounded-3xl p-8 hover:border-gold/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-gold ${
-                  i === 4 ? "lg:col-start-2" : ""
-                }`}
+                className="group relative bg-cream/[0.03] backdrop-blur-sm border border-gold/15 rounded-3xl p-8 hover:border-gold/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-gold"
               >
                 <div className="w-14 h-14 rounded-2xl bg-gradient-gold flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <Icon className="w-7 h-7 text-charcoal" strokeWidth={1.5} />

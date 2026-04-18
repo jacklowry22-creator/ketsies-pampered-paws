@@ -32,7 +32,7 @@ export function Nav() {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <a href="#top" className="flex items-center gap-3">
-          <Logo className="h-12 md:h-14 w-auto" />
+          <Logo className="text-3xl md:text-4xl" />
         </a>
 
         <nav className="hidden lg:flex items-center gap-8">

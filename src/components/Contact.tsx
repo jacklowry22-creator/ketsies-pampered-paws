@@ -36,7 +36,7 @@ export function Contact() {
           </h2>
           <div className="gold-divider w-32 mx-auto mt-8" />
           <p className="mt-6 text-charcoal/70 max-w-xl mx-auto">
-            The fastest way to book is a quick call or text. Send a photo of your dog for an instant estimate.
+            Have a question or want to book? Call or text Colette at <a href="tel:8455586870" className="text-gold-deep font-semibold hover:underline">845-558-6870</a>. She is happy to discuss your dog's needs!
           </p>
         </div>
 
@@ -44,7 +44,7 @@ export function Contact() {
           {/* Left: Quick contact + map */}
           <div className="space-y-6">
             <div className="bg-charcoal text-cream rounded-3xl p-8 md:p-10 shadow-luxe">
-              <h3 className="font-display text-3xl mb-6 text-gradient-gold">Quick Contact</h3>
+              <h3 className="font-display text-3xl mb-6 text-gradient-gold">Call or Text Colette Directly</h3>
               <div className="space-y-5">
                 <a href="tel:8455586870" className="flex items-center gap-4 group">
                   <span className="w-12 h-12 rounded-full bg-gradient-gold flex items-center justify-center shrink-0">

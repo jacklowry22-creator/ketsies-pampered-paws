@@ -7,7 +7,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-10 mb-12">
           <div>
-            <Logo className="h-20 w-auto -ml-2" />
+            <Logo className="text-5xl" />
             <p className="mt-4 text-cream/60 text-sm leading-relaxed font-serif italic max-w-xs">
               A boutique grooming experience for the dogs of Pearl River and beyond.
             </p>
@@ -31,6 +31,9 @@ export function Footer() {
           <p>© {new Date().getFullYear()} Ketsie's Dog Grooming. All rights reserved.</p>
           <p className="font-serif italic">Made with love for every pup.</p>
         </div>
+        <p className="text-center text-[11px] text-cream/40 mt-6 font-serif italic tracking-wide">
+          Website designed by <span className="text-gold/70">Celtic River Marketing</span>.
+        </p>
       </div>
     </footer>
   );

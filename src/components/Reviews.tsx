@@ -41,6 +41,17 @@ export function Reviews() {
             </Reveal>
           ))}
         </div>
+
+        <div className="mt-16 text-center">
+          <a
+            href="https://share.google/SOSlKwz1AnW3fGiey"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 bg-gradient-gold text-charcoal px-8 py-4 rounded-full font-semibold tracking-wide shadow-gold hover:scale-105 transition-transform"
+          >
+            <span className="text-lg">★</span> See All 60+ Google Reviews
+          </a>
+        </div>
       </div>
     </section>
   );
