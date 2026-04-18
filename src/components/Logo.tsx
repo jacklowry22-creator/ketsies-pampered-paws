@@ -1,12 +1,11 @@
-import logo from "@/assets/ketsie-logo.jpg";
-
 export function Logo({ className = "" }: { className?: string }) {
   return (
-    <img
-      src={logo}
-      alt="Ketsie's Grooming Emporium"
-      className={`object-contain ${className}`}
-      loading="eager"
-    />
+    <span
+      className={`font-display text-gradient-gold leading-none tracking-tight ${className}`}
+      style={{ fontStyle: "italic", fontWeight: 500 }}
+      aria-label="Ketsie's Dog Grooming"
+    >
+      Ketsie's
+    </span>
   );
 }
