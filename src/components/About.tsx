@@ -1,5 +1,7 @@
 import { useReveal } from "@/hooks/use-reveal";
 import dogBath from "@/assets/dog-bath.jpg";
+import dogEarmuffs from "@/assets/dog-earmuffs.jpg";
+import baileyFrontDoor from "@/assets/bailey-front-door.webp";
 
 export function About() {
   const ref = useReveal<HTMLDivElement>();
@@ -44,6 +46,12 @@ export function About() {
         <div className="order-1 lg:order-2 relative">
           <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-luxe">
             <img src={dogBath} alt="Happy golden retriever in the spa tub" className="w-full h-full object-cover" />
+          </div>
+          <div className="hidden md:block absolute -bottom-10 -left-8 w-44 h-56 rounded-2xl overflow-hidden shadow-luxe border-4 border-cream rotate-[-4deg]">
+            <img src={dogEarmuffs} alt="Calm golden retriever wearing protective ear muffs during grooming" className="w-full h-full object-cover" />
+          </div>
+          <div className="hidden md:block absolute -top-8 -right-6 w-36 h-44 rounded-2xl overflow-hidden shadow-luxe border-4 border-cream rotate-[5deg]">
+            <img src={baileyFrontDoor} alt="Bailey the golden retriever at the studio's flower-lined front door" className="w-full h-full object-cover" />
           </div>
         </div>
       </div>

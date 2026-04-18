@@ -31,8 +31,17 @@ export function Footer() {
           <p>© {new Date().getFullYear()} Ketsie's Dog Grooming. All rights reserved.</p>
           <p className="font-serif italic">Made with love for every pup.</p>
         </div>
-        <p className="text-center text-[11px] text-cream/40 mt-6 font-serif italic tracking-wide">
-          Website designed by <span className="text-gold/70">Celtic River Marketing</span>.
+        <p className="text-center text-[11px] text-cream/50 mt-6 font-serif italic tracking-wide">
+          Website designed by{" "}
+          <a
+            href="https://celticrivermarketing.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gold hover:text-gold-light transition-colors underline-offset-4 hover:underline"
+          >
+            Celtic River Marketing
+          </a>
+          .
         </p>
       </div>
     </footer>
