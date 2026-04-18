@@ -1,4 +1,4 @@
-import { useReveal } from "@/hooks/use-reveal";
+import { Reveal } from "@/components/Reveal";
 
 const reviews = [
   { text: "Ketsie's is a game changer! My dog used to hate grooming, but with Colette's one-on-one approach, he's so much calmer.", name: "Sarah P.", loc: "Pearl River" },
