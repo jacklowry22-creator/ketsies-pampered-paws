@@ -45,12 +45,6 @@ export function About() {
           <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-luxe">
             <img src={dogBath} alt="Happy golden retriever in the spa tub" className="w-full h-full object-cover" />
           </div>
-          <div className="absolute -bottom-8 -left-6 md:-left-12 bg-charcoal text-cream p-6 md:p-8 rounded-2xl shadow-luxe max-w-[260px] border border-gold/30">
-            <p className="font-display text-4xl md:text-5xl text-gradient-gold">1:1</p>
-            <p className="text-xs uppercase tracking-widest mt-2 text-cream/70">
-              Always one dog. Always full attention.
-            </p>
-          </div>
         </div>
       </div>
     </section>

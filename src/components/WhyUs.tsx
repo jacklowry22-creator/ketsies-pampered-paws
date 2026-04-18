@@ -29,8 +29,8 @@ const items = [
   },
   {
     icon: PawPrint,
-    title: "A Passion for Paws",
-    body: "Every pup we groom leaves with a beautiful, handmade bandana or bowtie, lovingly crafted by Colette herself — a special keepsake from their visit!",
+    title: "Our Grooming Philosophy",
+    body: "We take immense pride in being different. Unlike high-volume salons that keep dogs in cages for hours, we prioritize efficiency, safety, and a calm atmosphere. Every groom is handled with the same dedication we'd give our own pets.",
   },
 ];
 
