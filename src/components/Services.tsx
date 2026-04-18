@@ -61,8 +61,8 @@ const services = [
     fullWidth: true,
     desc: "Quick and stress-free nail maintenance.",
     items: [
-      "Small Dogs — $20",
-      "Large Dogs — $25",
+      "Small Dogs — $25",
+      "Large Dogs — $30",
       "FREE for clients on a recurring 6–8 week schedule",
     ],
   },

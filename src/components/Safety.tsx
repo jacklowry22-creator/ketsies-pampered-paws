@@ -5,8 +5,8 @@ import { ShieldCheck, Home, HandHeart, Sparkles } from "lucide-react";
 const pledges = [
   {
     icon: ShieldCheck,
-    title: "True One-on-One Dedication",
-    body: "Colette works on only one dog at a time. While there may be a brief overlap during drop-off/pick-up, your dog's grooming session is exclusively theirs.",
+    title: "Tailored Grooming Experience",
+    body: "We offer standard professional grooming and, by request, exclusive One-on-One sessions. If your pup prefers a quiet, solo environment — or if you have a nervous, anxious, or senior dog — please let us know when booking! We will prioritize scheduling these sessions so your companion is the only dog in our studio.",
   },
   {
     icon: Home,
