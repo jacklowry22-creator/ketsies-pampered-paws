@@ -1,10 +1,8 @@
 import { useReveal } from "@/hooks/use-reveal";
 import { Reveal } from "@/components/Reveal";
 import dogBackyard from "@/assets/dog-backyard.jpg";
-import dogBath from "@/assets/dog-bath.jpg";
 import dogDachshund from "@/assets/dog-dachshund.jpg";
 import dogCavapoo from "@/assets/dog-cavapoo.jpg";
-import coletteBailey from "@/assets/colette-bailey.jpg";
 import dogBernese from "@/assets/dog-bernese.jpg";
 import puppyHaircut from "@/assets/puppy-first-haircut.jpg";
 import dogBandanaDeck from "@/assets/dog-bandana-deck.jpg";
