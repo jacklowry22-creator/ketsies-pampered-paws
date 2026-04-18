@@ -58,6 +58,7 @@ const services = [
   {
     name: "Nail Trimming (Standalone)",
     tag: "Quick & stress-free",
+    fullWidth: true,
     desc: "Quick and stress-free nail maintenance.",
     items: [
       "Small Dogs — $20",
@@ -101,7 +102,9 @@ export function Services() {
                 className={`relative rounded-3xl p-8 md:p-10 border transition-all duration-500 hover:-translate-y-1 ${
                   s.featured
                     ? "bg-gradient-gold text-charcoal border-gold md:col-span-2 shadow-gold"
-                    : "bg-cream/[0.03] border-gold/15 hover:border-gold/40"
+                    : s.fullWidth
+                      ? "bg-cream/[0.03] border-gold/15 hover:border-gold/40 md:col-span-2"
+                      : "bg-cream/[0.03] border-gold/15 hover:border-gold/40"
                 }`}
               >
                 {s.featured && (
