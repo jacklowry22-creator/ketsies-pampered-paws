@@ -29,19 +29,19 @@ export function Safety() {
   const ref = useReveal<HTMLDivElement>();
   return (
     <section className="bg-cream py-24 md:py-36">
-      <div className="max-w-6xl mx-auto px-6">
-        <div ref={ref} className="reveal text-center mb-16">
+      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-[minmax(0,_22rem)_1fr] gap-14 lg:gap-20 items-start">
+        <div ref={ref} className="reveal lg:sticky lg:top-32">
           <p className="text-gold-deep uppercase tracking-[0.4em] text-xs mb-5">Our Pledge</p>
-          <h2 className="font-display text-4xl md:text-6xl text-charcoal leading-tight">
-            A commitment to <em className="text-gold-deep not-italic">safety & hygiene</em>
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal leading-[1.05]">
+            A commitment to <em className="text-gold-deep not-italic">safety<br />& hygiene</em>
           </h2>
-          <div className="gold-divider w-32 mx-auto mt-8" />
-          <p className="mt-8 max-w-2xl mx-auto text-charcoal/70 leading-relaxed">
+          <div className="gold-divider w-24 mt-8" />
+          <p className="mt-8 text-charcoal/70 leading-relaxed">
             We understand that leaving your beloved dog in someone else's care requires trust. Here's our pledge to ensure a safe, hygienic, and positive experience for every pet at Ketsie's Dog Grooming.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid sm:grid-cols-2 gap-6">
           {pledges.map((p) => {
             const Icon = p.icon;
             return (
