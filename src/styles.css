@@ -153,8 +153,11 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  animation: shimmer 4s linear infinite;
+  animation: shimmer 9s ease-in-out infinite;
 }
+
+section[id] { scroll-margin-top: 6rem; }
+main { padding-bottom: env(safe-area-inset-bottom); }
 
 @keyframes fade-up {
   from { opacity: 0; transform: translateY(30px); }
