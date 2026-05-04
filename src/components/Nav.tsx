@@ -31,7 +31,7 @@ export function Nav() {
       }`}
     >
       <div className={`hidden md:block text-center text-[10px] tracking-[0.3em] uppercase text-cream/70 border-b border-gold/15 transition-all ${scrolled ? "py-1" : "py-1.5"}`}>
-        Tue–Sat • By Appointment • Closed Sun–Mon
+        Mon–Sat • 7am–4pm • Closed Sundays
       </div>
       <div className={`max-w-7xl mx-auto px-6 flex items-center justify-between transition-all ${scrolled ? "py-2" : "py-3"}`}>
         <a href="#top" className="flex items-center gap-3">
