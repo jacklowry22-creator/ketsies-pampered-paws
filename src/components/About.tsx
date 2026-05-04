@@ -43,11 +43,8 @@ export function About() {
           <div className="mt-8 flex flex-wrap gap-2 text-xs uppercase tracking-widest">
             <span className="px-3 py-1.5 rounded-full border border-gold-deep/30 text-gold-deep">10+ Years Professional Grooming</span>
             <span className="px-3 py-1.5 rounded-full border border-gold-deep/30 text-gold-deep">Lifetime With Animals</span>
-            <span className="px-3 py-1.5 rounded-full border border-gold-deep/30 text-gold-deep">Raised on a Farm</span>
           </div>
-          <p className="mt-6 text-charcoal/75 text-[15px] leading-relaxed italic">
-            10 years professionally grooming. A lifetime with animals and pets. Colette grew up on a farm, always loved animals, and has always had pet dogs throughout her life.
-          </p>
+
           <p className="mt-8 font-display italic text-2xl text-gold-deep">— Colette</p>
         </div>
 
