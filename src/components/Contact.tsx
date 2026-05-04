@@ -80,7 +80,7 @@ export function Contact() {
 
             <a
               href="#services"
-              className="block bg-gradient-gold/10 border border-gold/30 rounded-2xl p-6 hover:border-gold/60 transition-colors group"
+              className="block bg-card border border-gold/40 rounded-2xl p-6 hover:border-gold-deep transition-colors group shadow-luxe"
             >
               <p className="text-gold-deep uppercase tracking-widest text-xs mb-2">First-time client?</p>
               <p className="font-display text-xl text-charcoal">
