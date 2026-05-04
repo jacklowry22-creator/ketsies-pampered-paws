@@ -49,8 +49,10 @@ function Index() {
       <Services />
       <Gallery />
       <Reviews />
+      <FAQ />
       <Contact />
       <Footer />
+      <StickyCallBar />
     </main>
   );
 }
