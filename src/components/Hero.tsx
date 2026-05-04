@@ -42,6 +42,20 @@ export function Hero() {
           One dog. One groomer. One unforgettable experience — set inside a private home studio
           surrounded by gardens, a koi pond, and acres of calm.
         </p>
+        <p className="mt-6 text-cream/85 text-sm md:text-base tracking-wide animate-fade-up flex flex-wrap items-center justify-center gap-x-3 gap-y-1" style={{ animationDelay: "0.4s" }}>
+          <a
+            href="https://g.page/r/Ca_xXkKYc9T5EBM/review"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gold hover:underline underline-offset-4"
+          >
+            ★★★★★ 67 Google Reviews
+          </a>
+          <span className="text-cream/40">·</span>
+          <span>Pearl River, NY</span>
+          <span className="text-cream/40">·</span>
+          <span>Closed Sundays</span>
+        </p>
 
         <div className="mt-10 flex flex-col sm:flex-row gap-4 animate-fade-up" style={{ animationDelay: "0.45s" }}>
           <a

@@ -16,7 +16,10 @@ export function Footer() {
             <p className="text-gold uppercase tracking-widest text-xs mb-4">Visit</p>
             <p className="flex items-start gap-2 text-cream/80 text-sm">
               <MapPin className="w-4 h-4 mt-1 text-gold shrink-0" />
-              110 Mountain View Ave<br />Pearl River, NY 10965
+              <span>
+                110 Mountain View Ave<br />Pearl River, NY 10965
+                <br /><span className="text-cream/60">Mon–Sat 7–4 · Closed Sundays</span>
+              </span>
             </p>
           </div>
           <div>
@@ -24,6 +27,7 @@ export function Footer() {
             <a href="tel:8455586870" className="flex items-center gap-2 text-cream/80 text-sm hover:text-gold transition-colors">
               <Phone className="w-4 h-4 text-gold" /> 845-558-6870
             </a>
+            <p className="text-cream/60 text-xs mt-2">Closed Sundays</p>
           </div>
         </div>
         <div className="gold-divider mb-6" />
