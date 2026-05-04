@@ -40,7 +40,7 @@ export function Hero() {
         </h1>
         <p className="mt-8 max-w-2xl text-cream/80 text-base md:text-lg leading-relaxed font-serif italic animate-fade-up" style={{ animationDelay: "0.3s" }}>
           One dog. One groomer. One unforgettable experience — set inside a private home studio
-          surrounded by gardens, a koi pond, and acres of calm.
+          surrounded by gardens, a koi pond, and a calm, personalized space.
         </p>
         <p className="mt-6 text-cream/85 text-sm md:text-base tracking-wide animate-fade-up flex flex-wrap items-center justify-center gap-x-3 gap-y-1" style={{ animationDelay: "0.4s" }}>
           <a
