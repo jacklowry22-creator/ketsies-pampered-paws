@@ -40,17 +40,25 @@ export function About() {
               beautiful handmade, hand-sewn bandana or bowtie that I create myself!
             </p>
           </div>
-          <p className="mt-10 font-display italic text-2xl text-gold-deep">— Colette</p>
+          <div className="mt-8 flex flex-wrap gap-2 text-xs uppercase tracking-widest">
+            <span className="px-3 py-1.5 rounded-full border border-gold-deep/30 text-gold-deep">10+ Years Professional Grooming</span>
+            <span className="px-3 py-1.5 rounded-full border border-gold-deep/30 text-gold-deep">Lifetime With Animals</span>
+            <span className="px-3 py-1.5 rounded-full border border-gold-deep/30 text-gold-deep">Raised on a Farm</span>
+          </div>
+          <p className="mt-6 text-charcoal/75 text-[15px] leading-relaxed italic">
+            10 years professionally grooming. A lifetime with animals and pets. Colette grew up on a farm, always loved animals, and has always had pet dogs throughout her life.
+          </p>
+          <p className="mt-8 font-display italic text-2xl text-gold-deep">— Colette</p>
         </div>
 
         <div className="order-1 lg:order-2 relative">
           <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-luxe">
             <img src={dogBath} alt="Happy golden retriever in the spa tub" className="w-full h-full object-cover" />
           </div>
-          <div className="hidden md:block absolute -bottom-10 -left-8 w-44 h-56 rounded-2xl overflow-hidden shadow-luxe border-4 border-cream rotate-[-4deg]">
+          <div className="hidden xl:block absolute -bottom-10 -left-8 w-44 h-56 rounded-2xl overflow-hidden shadow-luxe border-4 border-cream rotate-[-4deg]">
             <img src={dogEarmuffs} alt="Calm golden retriever wearing protective ear muffs during grooming" className="w-full h-full object-cover" />
           </div>
-          <div className="hidden md:block absolute -top-8 -right-6 w-36 h-44 rounded-2xl overflow-hidden shadow-luxe border-4 border-cream rotate-[5deg]">
+          <div className="hidden xl:block absolute -top-8 -right-6 w-36 h-44 rounded-2xl overflow-hidden shadow-luxe border-4 border-cream rotate-[5deg]">
             <img src={baileyFrontDoor} alt="Bailey the golden retriever at the studio's flower-lined front door" className="w-full h-full object-cover" />
           </div>
         </div>

@@ -26,11 +26,14 @@ export function Nav() {
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-charcoal/90 backdrop-blur-md py-2 shadow-luxe"
-          : "bg-transparent py-4"
+          ? "bg-charcoal/90 backdrop-blur-md shadow-luxe"
+          : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+      <div className={`hidden md:block text-center text-[10px] tracking-[0.3em] uppercase text-cream/70 border-b border-gold/15 transition-all ${scrolled ? "py-1" : "py-1.5"}`}>
+        Tue–Sat • By Appointment • Closed Sun–Mon
+      </div>
+      <div className={`max-w-7xl mx-auto px-6 flex items-center justify-between transition-all ${scrolled ? "py-2" : "py-3"}`}>
         <a href="#top" className="flex items-center gap-3">
           <Logo className="text-3xl md:text-4xl" />
         </a>

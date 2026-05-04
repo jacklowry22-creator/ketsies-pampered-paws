@@ -72,10 +72,22 @@ export function Contact() {
                     <span className="block text-xs uppercase tracking-widest text-cream/60">Studio</span>
                     <span className="block text-cream/90">110 Mountain View Ave</span>
                     <span className="block text-cream/90">Pearl River, NY 10965</span>
+                    <span className="block text-cream/70 text-sm mt-2">Hours: Mon–Sat 7–4 · Closed Sundays</span>
                   </span>
                 </div>
               </div>
             </div>
+
+            <a
+              href="#services"
+              className="block bg-card border border-gold/40 rounded-2xl p-6 hover:border-gold-deep transition-colors group shadow-luxe"
+            >
+              <p className="text-gold-deep uppercase tracking-widest text-xs mb-2">First-time client?</p>
+              <p className="font-display text-xl text-charcoal">
+                Start with our <span className="text-gold-deep group-hover:underline">Puppy Introduction Groom →</span>
+              </p>
+              <p className="text-charcoal/70 text-sm mt-2">A gentle, calm first grooming experience designed to build a positive lifelong relationship with grooming.</p>
+            </a>
 
             <div className="rounded-3xl overflow-hidden shadow-luxe border border-border h-[340px]">
               <iframe
@@ -103,23 +115,48 @@ export function Contact() {
                 <label className="block text-xs uppercase tracking-widest text-charcoal/60 mb-2">Your Name</label>
                 <input required name="name" className="w-full bg-background border border-border rounded-xl px-4 py-3 focus:outline-none focus:border-gold transition-colors" />
               </div>
-              <div className="grid sm:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-xs uppercase tracking-widest text-charcoal/60 mb-2">Phone</label>
-                  <input required name="phone" type="tel" className="w-full bg-background border border-border rounded-xl px-4 py-3 focus:outline-none focus:border-gold transition-colors" />
-                </div>
-                <div>
-                  <label className="block text-xs uppercase tracking-widest text-charcoal/60 mb-2">Email</label>
-                  <input name="email" type="email" className="w-full bg-background border border-border rounded-xl px-4 py-3 focus:outline-none focus:border-gold transition-colors" />
-                </div>
+              <div>
+                <label className="block text-xs uppercase tracking-widest text-charcoal/60 mb-2">Phone</label>
+                <input required name="phone" type="tel" className="w-full bg-background border border-border rounded-xl px-4 py-3 focus:outline-none focus:border-gold transition-colors" />
+              </div>
+              <div>
+                <label className="block text-xs uppercase tracking-widest text-charcoal/60 mb-2">Email <span className="normal-case tracking-normal text-charcoal/40">(optional)</span></label>
+                <input name="email" type="email" className="w-full bg-background border border-border rounded-xl px-4 py-3 focus:outline-none focus:border-gold transition-colors" />
               </div>
               <div>
                 <label className="block text-xs uppercase tracking-widest text-charcoal/60 mb-2">Dog's Name & Breed</label>
                 <input name="dog" className="w-full bg-background border border-border rounded-xl px-4 py-3 focus:outline-none focus:border-gold transition-colors" />
               </div>
+              <div className="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-xs uppercase tracking-widest text-charcoal/60 mb-2">Service of interest</label>
+                  <select name="service" defaultValue="" className="w-full bg-background border border-border rounded-xl px-4 py-3 focus:outline-none focus:border-gold transition-colors">
+                    <option value="" disabled>Select a service…</option>
+                    <option>Maintenance Groom</option>
+                    <option>Restoration Groom</option>
+                    <option>Bath & Blowout</option>
+                    <option>Puppy Introduction Groom</option>
+                    <option>Full Deshed Treatment</option>
+                    <option>Nail Trimming</option>
+                    <option>One-on-One Session</option>
+                    <option>Not sure — please advise</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-xs uppercase tracking-widest text-charcoal/60 mb-2">Preferred day/time</label>
+                  <select name="preferred" defaultValue="" className="w-full bg-background border border-border rounded-xl px-4 py-3 focus:outline-none focus:border-gold transition-colors">
+                    <option value="" disabled>Preferred day (we're closed Sundays)…</option>
+                    <option>Weekday morning (Mon–Sat)</option>
+                    <option>Weekday afternoon (Mon–Sat)</option>
+                    <option>Saturday morning</option>
+                    <option>Saturday afternoon</option>
+                    <option>I'm flexible</option>
+                  </select>
+                </div>
+              </div>
               <div>
                 <label className="block text-xs uppercase tracking-widest text-charcoal/60 mb-2">Tell us about your pup</label>
-                <textarea required name="message" rows={5} className="w-full bg-background border border-border rounded-xl px-4 py-3 focus:outline-none focus:border-gold transition-colors resize-none" />
+                <textarea required name="message" rows={3} className="w-full bg-background border border-border rounded-xl px-4 py-3 focus:outline-none focus:border-gold transition-colors resize-none" />
               </div>
               <button
                 type="submit"
@@ -128,6 +165,9 @@ export function Contact() {
               >
                 {status === "sending" ? "Sending…" : status === "ok" ? "Sent! We'll be in touch ✨" : "Request Booking"}
               </button>
+              <p className="text-center text-xs text-charcoal/60 leading-relaxed">
+                We typically reply immediately, if not within a few hours during business hours. Closed Sundays.
+              </p>
               {status === "err" && <p className="text-destructive text-sm text-center">Something went wrong. Please call or text us instead.</p>}
             </div>
           </form>

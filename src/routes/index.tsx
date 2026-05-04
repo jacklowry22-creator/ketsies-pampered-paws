@@ -8,8 +8,10 @@ import { Safety } from "@/components/Safety";
 import { Services } from "@/components/Services";
 import { Gallery } from "@/components/Gallery";
 import { Reviews } from "@/components/Reviews";
+import { FAQ } from "@/components/FAQ";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
+import { StickyCallBar } from "@/components/StickyCallBar";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -47,8 +49,10 @@ function Index() {
       <Services />
       <Gallery />
       <Reviews />
+      <FAQ />
       <Contact />
       <Footer />
+      <StickyCallBar />
     </main>
   );
 }
