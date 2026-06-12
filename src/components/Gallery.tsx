@@ -1,5 +1,7 @@
+import { useState, useEffect, useCallback } from "react";
 import { useReveal } from "@/hooks/use-reveal";
 import { Reveal } from "@/components/Reveal";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import dogBackyard from "@/assets/dog-backyard.jpg";
 import dogDachshund from "@/assets/dog-dachshund.jpg";
 import dogCavapoo from "@/assets/dog-cavapoo.jpg";
@@ -7,7 +9,6 @@ import dogBernese from "@/assets/dog-bernese.jpg";
 import puppyHaircut from "@/assets/puppy-first-haircut.jpg";
 import dogBandanaDeck from "@/assets/dog-bandana-deck.jpg";
 
-// 3-col grid, 2 rows. Bottom-left replaced with the new puppy first-haircut photo.
 const photos = [
   { src: dogBackyard, alt: "Golden retriever enjoying the lush, private backyard" },
   { src: dogCavapoo, alt: "Cavapoo posing on the grooming table with a handmade floral bandana" },
@@ -19,6 +20,34 @@ const photos = [
 
 export function Gallery() {
   const ref = useReveal<HTMLDivElement>();
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const close = useCallback(() => setOpenIndex(null), []);
+  const next = useCallback(
+    () => setOpenIndex((i) => (i === null ? null : (i + 1) % photos.length)),
+    [],
+  );
+  const prev = useCallback(
+    () => setOpenIndex((i) => (i === null ? null : (i - 1 + photos.length) % photos.length)),
+    [],
+  );
+
+  useEffect(() => {
+    if (openIndex === null) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") close();
+      else if (e.key === "ArrowRight") next();
+      else if (e.key === "ArrowLeft") prev();
+    };
+    window.addEventListener("keydown", onKey);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [openIndex, close, next, prev]);
+
   return (
     <section id="gallery" className="bg-cream py-24 md:py-36">
       <div className="max-w-7xl mx-auto px-6">
@@ -38,19 +67,66 @@ export function Gallery() {
             <Reveal
               key={i}
               delay={(i % 3) * 0.05}
-              className="relative overflow-hidden rounded-3xl group aspect-square shadow-luxe"
+              className="relative overflow-hidden rounded-3xl group aspect-square shadow-luxe cursor-pointer"
             >
-              <img
-                src={p.src}
-                alt={p.alt}
-                className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <button
+                type="button"
+                onClick={() => setOpenIndex(i)}
+                aria-label={`Open ${p.alt}`}
+                className="absolute inset-0 w-full h-full"
+              >
+                <img
+                  src={p.src}
+                  alt={p.alt}
+                  className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              </button>
             </Reveal>
           ))}
         </div>
       </div>
+
+      {openIndex !== null && (
+        <div
+          className="fixed inset-0 z-[100] bg-charcoal/90 backdrop-blur-sm flex items-center justify-center p-4 animate-fade-up"
+          onClick={close}
+          role="dialog"
+          aria-modal="true"
+        >
+          <button
+            type="button"
+            onClick={(e) => { e.stopPropagation(); close(); }}
+            aria-label="Close"
+            className="absolute top-6 right-6 text-gold hover:scale-110 transition-transform z-10"
+          >
+            <X className="w-8 h-8" />
+          </button>
+          <button
+            type="button"
+            onClick={(e) => { e.stopPropagation(); prev(); }}
+            aria-label="Previous"
+            className="absolute left-4 md:left-8 text-gold hover:scale-110 transition-transform z-10"
+          >
+            <ChevronLeft className="w-10 h-10" />
+          </button>
+          <img
+            src={photos[openIndex].src}
+            alt={photos[openIndex].alt}
+            onClick={(e) => e.stopPropagation()}
+            className="max-w-[92vw] max-h-[88vh] object-contain rounded-2xl shadow-luxe"
+          />
+          <button
+            type="button"
+            onClick={(e) => { e.stopPropagation(); next(); }}
+            aria-label="Next"
+            className="absolute right-4 md:right-8 text-gold hover:scale-110 transition-transform z-10"
+          >
+            <ChevronRight className="w-10 h-10" />
+          </button>
+        </div>
+      )}
     </section>
   );
 }

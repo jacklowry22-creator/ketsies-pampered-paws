@@ -16,16 +16,27 @@ import { StickyCallBar } from "@/components/StickyCallBar";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Ketsie's Dog Grooming — Boutique 1:1 Grooming in Pearl River, NY" },
+      { title: "Dog Grooming Pearl River NY | Ketsie's Pet Retreat" },
       {
         name: "description",
         content:
-          "Boutique one-on-one dog grooming in Pearl River, NY. Cage-free studio, natural products, handmade bandanas. Call 845-558-6870.",
+          "Ketsie's Dog Grooming — Pearl River, NY's boutique one-on-one grooming studio. Founded by Colette. 67+ five-star reviews. Call or text 845-558-6870.",
       },
-      { property: "og:title", content: "Ketsie's Dog Grooming — Pearl River, NY" },
-      { property: "og:description", content: "A boutique resort experience for your dog. One groomer. One dog. Always." },
+      {
+        name: "keywords",
+        content:
+          "dog grooming Pearl River NY, dog groomer Pearl River, Ketsies dog grooming, Colette groomer, boutique dog grooming Rockland County",
+      },
+      { property: "og:title", content: "Ketsie's Pet Retreat | Pearl River Dog Grooming" },
+      {
+        property: "og:description",
+        content: "One dog. One groomer. One unforgettable experience. 67+ five-star reviews in Pearl River, NY.",
+      },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://www.ketsiesdoggrooming.com" },
     ],
     links: [
+      { rel: "canonical", href: "https://www.ketsiesdoggrooming.com" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {

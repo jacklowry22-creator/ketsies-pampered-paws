@@ -1,16 +1,36 @@
 import { Logo } from "./Logo";
-import { Phone, MapPin } from "lucide-react";
+import { Phone, MapPin, Instagram, Facebook } from "lucide-react";
 
 export function Footer() {
   return (
     <footer className="bg-charcoal text-cream pt-16 pb-8 border-t border-gold/20">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid md:grid-cols-3 gap-10 mb-12">
+        <div className="grid md:grid-cols-4 gap-10 mb-12">
           <div>
             <Logo className="text-5xl" />
             <p className="mt-4 text-cream/60 text-sm leading-relaxed font-serif italic max-w-xs">
               A boutique grooming experience for the dogs of Pearl River and beyond.
             </p>
+            <div className="flex gap-4 mt-4">
+              <a
+                href="https://www.instagram.com/ketsiesdoggrooming"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="text-cream/50 hover:text-gold transition-colors"
+              >
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a
+                href="https://www.facebook.com/ketsiesdoggrooming"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="text-cream/50 hover:text-gold transition-colors"
+              >
+                <Facebook className="w-5 h-5" />
+              </a>
+            </div>
           </div>
           <div>
             <p className="text-gold uppercase tracking-widest text-xs mb-4">Visit</p>
@@ -28,6 +48,20 @@ export function Footer() {
               <Phone className="w-4 h-4 text-gold" /> 845-558-6870
             </a>
             <p className="text-cream/60 text-xs mt-2">Closed Sundays</p>
+          </div>
+          <div>
+            <p className="text-gold uppercase tracking-widest text-xs mb-4">Quick Links</p>
+            <nav className="flex flex-col gap-2">
+              {["#about", "#services", "#gallery", "#reviews", "#faq", "#contact"].map((href) => (
+                <a
+                  key={href}
+                  href={href}
+                  className="text-cream/60 text-sm hover:text-gold transition-colors capitalize"
+                >
+                  {href.replace("#", "")}
+                </a>
+              ))}
+            </nav>
           </div>
         </div>
         <div className="gold-divider mb-6" />
