@@ -120,8 +120,8 @@ export function Contact() {
                 <input required name="phone" type="tel" className="w-full bg-background border border-border rounded-xl px-4 py-3 focus:outline-none focus:border-gold transition-colors" />
               </div>
               <div>
-                <label className="block text-xs uppercase tracking-widest text-charcoal/60 mb-2">Email <span className="normal-case tracking-normal text-charcoal/40">(optional)</span></label>
-                <input name="email" type="email" className="w-full bg-background border border-border rounded-xl px-4 py-3 focus:outline-none focus:border-gold transition-colors" />
+                <label className="block text-xs uppercase tracking-widest text-charcoal/60 mb-2">Email</label>
+                <input required name="email" type="email" className="w-full bg-background border border-border rounded-xl px-4 py-3 focus:outline-none focus:border-gold transition-colors" />
               </div>
               <div>
                 <label className="block text-xs uppercase tracking-widest text-charcoal/60 mb-2">Dog's Name & Breed</label>
