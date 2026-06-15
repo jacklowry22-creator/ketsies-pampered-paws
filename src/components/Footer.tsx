@@ -1,5 +1,5 @@
 import { Logo } from "./Logo";
-import { Phone, MapPin, Instagram, Facebook } from "lucide-react";
+import { Phone, MapPin, Facebook } from "lucide-react";
 
 export function Footer() {
   return (
@@ -12,16 +12,7 @@ export function Footer() {
               A boutique grooming experience for the dogs of Pearl River and beyond.
             </p>
             <div className="flex gap-4 mt-4">
-              <a
-                href="https://www.instagram.com/ketsiesdoggrooming"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                className="text-cream/50 hover:text-gold transition-colors"
-              >
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a
+              <
                 href="https://www.facebook.com/ketsiesdoggrooming"
                 target="_blank"
                 rel="noopener noreferrer"
