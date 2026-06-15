@@ -197,6 +197,7 @@ export function Contact() {
               {status === "err" && <p className="text-destructive text-sm text-center">Something went wrong. Please call or text us instead.</p>}
             </div>
           </form>
+          )}
         </div>
       </div>
     </section>
