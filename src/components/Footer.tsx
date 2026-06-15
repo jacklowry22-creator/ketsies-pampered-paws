@@ -12,7 +12,7 @@ export function Footer() {
               A boutique grooming experience for the dogs of Pearl River and beyond.
             </p>
             <div className="flex gap-4 mt-4">
-              <
+              <a
                 href="https://www.facebook.com/ketsiesdoggrooming"
                 target="_blank"
                 rel="noopener noreferrer"

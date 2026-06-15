@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Phone, MessageCircle, MapPin, Mail } from "lucide-react";
+import { Phone, MessageCircle, MapPin, Mail, Check } from "lucide-react";
 import { useReveal } from "@/hooks/use-reveal";
 
 export function Contact() {
@@ -102,7 +102,33 @@ export function Contact() {
             </div>
           </div>
 
-          {/* Right: Form */}
+          {/* Right: Form or success card */}
+          {status === "ok" ? (
+            <div className="bg-charcoal text-cream rounded-3xl p-10 md:p-12 shadow-luxe flex flex-col items-center justify-center text-center">
+              <div className="w-16 h-16 rounded-full bg-gradient-gold flex items-center justify-center mb-6">
+                <Check className="w-8 h-8 text-charcoal" strokeWidth={3} />
+              </div>
+              <h3 className="font-display text-3xl md:text-4xl text-gradient-gold mb-4">
+                We got your message!
+              </h3>
+              <p className="text-cream/80 leading-relaxed max-w-md mb-6">
+                Colette will be in touch within a few hours. In the meantime, feel free to call or text us anytime.
+              </p>
+              <a
+                href="tel:8455586870"
+                className="inline-flex items-center gap-2 bg-gradient-gold text-charcoal font-semibold px-6 py-3 rounded-full shadow-gold hover:scale-[1.02] transition-transform"
+              >
+                <Phone className="w-4 h-4" /> 845-558-6870
+              </a>
+              <button
+                type="button"
+                onClick={() => setStatus("idle")}
+                className="mt-6 text-cream/60 text-xs uppercase tracking-widest hover:text-gold transition-colors"
+              >
+                Send another message
+              </button>
+            </div>
+          ) : (
           <form
             onSubmit={onSubmit}
             className="bg-card border border-border rounded-3xl p-8 md:p-10 shadow-luxe"
