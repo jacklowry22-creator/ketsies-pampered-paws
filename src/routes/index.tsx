@@ -16,7 +16,7 @@ import { StickyCallBar } from "@/components/StickyCallBar";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Dog Grooming Pearl River NY | Ketsie's Pet Retreat" },
+      { title: "Dog Grooming Pearl River NY | Ketsie's Dog Grooming" },
       {
         name: "description",
         content:
@@ -27,13 +27,18 @@ export const Route = createFileRoute("/")({
         content:
           "dog grooming Pearl River NY, dog groomer Pearl River, Ketsies dog grooming, Colette groomer, boutique dog grooming Rockland County",
       },
-      { property: "og:title", content: "Ketsie's Pet Retreat | Pearl River Dog Grooming" },
+      { property: "og:title", content: "Ketsie's Dog Grooming | Pearl River, NY" },
       {
         property: "og:description",
         content: "One dog. One groomer. One unforgettable experience. 67+ five-star reviews in Pearl River, NY.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://www.ketsiesdoggrooming.com" },
+      { name: "twitter:title", content: "Ketsie's Dog Grooming | Pearl River, NY" },
+      {
+        name: "twitter:description",
+        content: "One dog. One groomer. One unforgettable experience. 67+ five-star reviews in Pearl River, NY.",
+      },
     ],
     links: [
       { rel: "canonical", href: "https://www.ketsiesdoggrooming.com" },
