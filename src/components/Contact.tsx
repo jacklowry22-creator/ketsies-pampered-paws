@@ -189,7 +189,7 @@ export function Contact() {
                 disabled={status === "sending"}
                 className="w-full bg-gradient-gold text-charcoal font-semibold py-4 rounded-full tracking-wide shadow-gold hover:scale-[1.02] transition-transform disabled:opacity-60"
               >
-                {status === "sending" ? "Sending…" : status === "ok" ? "Sent! We'll be in touch ✨" : "Request Booking"}
+                {status === "sending" ? "Sending…" : "Request Booking"}
               </button>
               <p className="text-center text-xs text-charcoal/60 leading-relaxed">
                 We typically reply immediately, if not within a few hours during business hours. Closed Sundays.
