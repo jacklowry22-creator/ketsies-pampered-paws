@@ -2,6 +2,9 @@
 @source "../src";
 @import "tw-animate-css";
 
+#lovable-badge { display: none !important; }
+a[href*="lovable.dev"][id*="badge"], div[id*="lovable-badge"] { display: none !important; }
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
