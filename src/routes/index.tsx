@@ -39,6 +39,10 @@ export const Route = createFileRoute("/")({
         name: "twitter:description",
         content: "One dog. One groomer. One unforgettable experience. 67+ five-star reviews in Pearl River, NY.",
       },
+      { property: "og:image", content: "https://www.ketsiesdoggrooming.com/og-image.png" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { name: "twitter:image", content: "https://www.ketsiesdoggrooming.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://www.ketsiesdoggrooming.com" },
