@@ -71,7 +71,9 @@ export function Gallery() {
             <Reveal
               key={i}
               delay={(i % 3) * 0.05}
-              className="relative overflow-hidden rounded-3xl group aspect-square shadow-luxe cursor-pointer"
+              className={`relative overflow-hidden rounded-3xl group aspect-square shadow-luxe cursor-pointer ${
+                i === photos.length - 1 && photos.length % 3 === 1 ? "md:col-start-2" : ""
+              }`}
             >
               <button
                 type="button"
