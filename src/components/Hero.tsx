@@ -49,7 +49,7 @@ export function Hero() {
             rel="noopener noreferrer"
             className="text-gold hover:underline underline-offset-4"
           >
-            ★★★★★ 67 Google Reviews
+            ★★★★★ 69 Google Reviews
           </a>
           <span className="text-cream/40">·</span>
           <span>Pearl River, NY</span>

@@ -20,7 +20,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Ketsie's Dog Grooming — Pearl River, NY's boutique one-on-one grooming studio. Founded by Colette. 67+ five-star reviews. Call or text 845-558-6870.",
+          "Ketsie's Dog Grooming — Pearl River, NY's boutique one-on-one grooming studio. Founded by Colette. 69+ five-star reviews. Call or text 845-558-6870.",
       },
       {
         name: "keywords",
@@ -30,14 +30,14 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Ketsie's Dog Grooming | Pearl River, NY" },
       {
         property: "og:description",
-        content: "One dog. One groomer. One unforgettable experience. 67+ five-star reviews in Pearl River, NY.",
+        content: "One dog. One groomer. One unforgettable experience. 69+ five-star reviews in Pearl River, NY.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://www.ketsiesdoggrooming.com" },
       { name: "twitter:title", content: "Ketsie's Dog Grooming | Pearl River, NY" },
       {
         name: "twitter:description",
-        content: "One dog. One groomer. One unforgettable experience. 67+ five-star reviews in Pearl River, NY.",
+        content: "One dog. One groomer. One unforgettable experience. 69+ five-star reviews in Pearl River, NY.",
       },
       { property: "og:image", content: "https://www.ketsiesdoggrooming.com/og-image.png" },
       { property: "og:image:width", content: "1200" },
