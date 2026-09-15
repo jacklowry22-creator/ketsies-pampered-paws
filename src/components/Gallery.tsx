@@ -85,11 +85,20 @@ export function Gallery() {
                 aria-label={`Open ${p.alt}`}
                 className="absolute inset-0 w-full h-full"
               >
+                {isBanner && (
+                  <img
+                    src={p.src}
+                    alt=""
+                    aria-hidden="true"
+                    className="absolute inset-0 w-full h-full object-cover scale-110 blur-2xl opacity-50"
+                    loading="lazy"
+                  />
+                )}
                 <img
                   src={p.src}
                   alt={p.alt}
                   className={`absolute inset-0 w-full h-full transition-transform duration-700 group-hover:scale-110 ${
-                    isBanner ? "object-contain rounded-3xl" : "object-cover object-center"
+                    isBanner ? "object-contain" : "object-cover object-center"
                   }`}
                   loading="lazy"
                 />
