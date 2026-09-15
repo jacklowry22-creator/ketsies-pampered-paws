@@ -8,9 +8,13 @@ import dogCavapoo from "@/assets/dog-cavapoo.jpg";
 import dogBernese from "@/assets/dog-bernese.jpg";
 import puppyHaircut from "@/assets/puppy-first-haircut.jpg";
 import dogBandanaDeck from "@/assets/dog-bandana-deck.jpg";
+import afghanHoundAsset from "@/assets/afghan-hound.jpg.asset.json";
+
+const afghanHound = afghanHoundAsset.url;
 
 const photos = [
   { src: dogBackyard, alt: "Golden retriever enjoying the lush, private backyard" },
+  { src: afghanHound, alt: "Nine-year-old Afghan Hound wearing a handmade floral bandana in the studio's garden by the koi pond" },
   { src: dogCavapoo, alt: "Cavapoo posing on the grooming table with a handmade floral bandana" },
   { src: dogBernese, alt: "Bernese mountain dog dressed up with a handmade pink bow" },
   { src: puppyHaircut, alt: "Cavapoo puppy after a gentle first haircut at Ketsie's" },
@@ -67,7 +71,9 @@ export function Gallery() {
             <Reveal
               key={i}
               delay={(i % 3) * 0.05}
-              className="relative overflow-hidden rounded-3xl group aspect-square shadow-luxe cursor-pointer"
+              className={`relative overflow-hidden rounded-3xl group aspect-square shadow-luxe cursor-pointer ${
+                i === photos.length - 1 && photos.length % 3 === 1 ? "md:col-start-2" : ""
+              }`}
             >
               <button
                 type="button"
