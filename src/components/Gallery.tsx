@@ -73,7 +73,7 @@ export function Gallery() {
               delay={(i % 3) * 0.05}
               className={`relative overflow-hidden rounded-3xl group shadow-luxe cursor-pointer ${
                 i === photos.length - 1 && photos.length % 3 === 1
-                  ? "col-span-2 md:col-span-3 aspect-[16/10] md:aspect-[21/9]"
+                  ? "col-span-2 md:col-span-3 aspect-[16/9] md:aspect-[2/1]"
                   : "aspect-square"
               }`}
             >
