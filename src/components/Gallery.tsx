@@ -67,14 +67,16 @@ export function Gallery() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-          {photos.map((p, i) => (
+          {photos.map((p, i) => {
+            const isBanner = i === photos.length - 1 && photos.length % 3 === 1;
+            return (
             <Reveal
               key={i}
               delay={(i % 3) * 0.05}
-              className={`relative overflow-hidden rounded-3xl group shadow-luxe cursor-pointer ${
-                i === photos.length - 1 && photos.length % 3 === 1
+              className={`relative overflow-hidden rounded-3xl group cursor-pointer ${
+                isBanner
                   ? "col-span-2 md:col-span-3 aspect-[16/9] md:aspect-[2/1]"
-                  : "aspect-square"
+                  : "shadow-luxe aspect-square"
               }`}
             >
               <button
@@ -83,16 +85,28 @@ export function Gallery() {
                 aria-label={`Open ${p.alt}`}
                 className="absolute inset-0 w-full h-full"
               >
+                {isBanner && (
+                  <img
+                    src={p.src}
+                    alt=""
+                    aria-hidden="true"
+                    className="absolute inset-0 w-full h-full object-cover scale-110 blur-2xl opacity-50"
+                    loading="lazy"
+                  />
+                )}
                 <img
                   src={p.src}
                   alt={p.alt}
-                  className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
+                  className={`absolute inset-0 w-full h-full transition-transform duration-700 group-hover:scale-110 ${
+                    isBanner ? "object-contain" : "object-cover object-center"
+                  }`}
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               </button>
             </Reveal>
-          ))}
+            );
+          })}
         </div>
       </div>
 
