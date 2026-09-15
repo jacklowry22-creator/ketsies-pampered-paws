@@ -2,6 +2,12 @@ import { Reveal } from "@/components/Reveal";
 
 const reviews = [
   {
+    text: "I can't recommend Collette and Ketsie's Dog Grooming enough! She runs everything out of her beautiful home, and it's the cleanest, freshest, most state-of-the-art grooming setup I've ever seen. You can tell she really cares about what she does. It's so much more than just great grooming. Collette has been there for me and my dog through some really tough times in my life. No matter what was going on, I always felt like my dog was safe, loved, and in the best hands. She's given me advice, gone way above and beyond, and just made me feel so welcomed and accepted every single time. She's honestly become a real friend to me and my family. I trust her completely. If you're looking for someone who will treat your dog like their own and actually care about you too, stop searching. Go to Collette. I tell everyone I know about her! Thank you Collette for everything — you're the best!!",
+    name: "Nicole Duffy",
+    loc: "Cafe Diem Owner, Local Resident",
+    date: "21 weeks ago",
+  },
+  {
     text: "I cannot recommend Ms. Colette enough as a dog groomer. She is truly one of the most patient, skilled, and compassionate groomers I have ever trusted with my dog. My dog Zucc is a large, fluffy dog — Colette always handles it with kindness, patience, and professionalism. Zucc is always relaxed with her, which says everything.",
     name: "Mary Russo",
     loc: "Pearl River",
