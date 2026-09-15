@@ -2,6 +2,24 @@ import { Reveal } from "@/components/Reveal";
 
 const reviews = [
   {
+    text: "I cannot thank this groomer enough for her help with my bulldog. He was sprayed by a skunk and I called Ketsie — she got me in that day, made my dog so comfortable, and helped get the smell out of him. She also told me what to do to help the smell in my house and my car. She was incredibly helpful and most importantly my dog trusted her and remained calm through the process. I highly recommend using this business and will be back for sure.",
+    name: "Meaghan McKenna",
+    loc: "Bulldog mom",
+    date: "Google review",
+  },
+  {
+    text: "Collette is such a gem of a Groomer. Her place is spotless, not to mention walking in from the outside is a sanctuary! She was great with my dog and so helpful with sharing pet resources. I highly recommend this private business!",
+    name: "Janet O'Shea",
+    loc: "Google review",
+    date: "10 weeks ago",
+  },
+  {
+    text: "Immaculate service and features, owner is knowledgeable and walked us through every step of the service, as well as gave us product recommendations to keep our puppy's skin and paws healthy. Phenomenal place and will be returning ♥",
+    name: "Drea M.",
+    loc: "Puppy parent",
+    date: "Google review",
+  },
+  {
     text: "I can't recommend Collette and Ketsie's Dog Grooming enough! She runs everything out of her beautiful home, and it's the cleanest, freshest, most state-of-the-art grooming setup I've ever seen. You can tell she really cares about what she does. It's so much more than just great grooming. Collette has been there for me and my dog through some really tough times in my life. No matter what was going on, I always felt like my dog was safe, loved, and in the best hands. She's given me advice, gone way above and beyond, and just made me feel so welcomed and accepted every single time. She's honestly become a real friend to me and my family. I trust her completely. If you're looking for someone who will treat your dog like their own and actually care about you too, stop searching. Go to Collette. I tell everyone I know about her! Thank you Collette for everything — you're the best!!",
     name: "Nicole Duffy",
     loc: "Cafe Diem Owner, Local Resident",
