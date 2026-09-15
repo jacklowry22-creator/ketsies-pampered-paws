@@ -9,6 +9,13 @@ import dogBernese from "@/assets/dog-bernese.jpg";
 import puppyHaircut from "@/assets/puppy-first-haircut.jpg";
 import dogBandanaDeck from "@/assets/dog-bandana-deck.jpg";
 import afghanHoundAsset from "@/assets/afghan-hound.jpg.asset.json";
+import bathTimeAsset from "@/assets/bath-time.jpeg.asset.json";
+import bestFriendsAsset from "@/assets/best-friends.jpeg.asset.json";
+import biggestAsset from "@/assets/biggest.jpg.asset.json";
+import happiestBoyAsset from "@/assets/happiest-boy.jpeg.asset.json";
+import happyBaileyAsset from "@/assets/happy-bailey.jpeg.asset.json";
+import smilingAsset from "@/assets/smiling.jpeg.asset.json";
+import waitingForMomAsset from "@/assets/waiting-for-mom.jpeg.asset.json";
 
 const afghanHound = afghanHoundAsset.url;
 
@@ -19,7 +26,14 @@ const photos = [
   { src: dogBernese, alt: "Bernese mountain dog dressed up with a handmade pink bow" },
   { src: puppyHaircut, alt: "Cavapoo puppy after a gentle first haircut at Ketsie's" },
   { src: dogBandanaDeck, alt: "Freshly groomed pup wearing a handmade red polka-dot bandana on the deck" },
-  { src: dogDachshund, alt: "Long-haired dachshund freshly groomed" },
+  { src: bathTimeAsset.url, alt: "Curly-haired pup enjoying bath time at Ketsie's" },
+  { src: bestFriendsAsset.url, alt: "Two freshly groomed best friends wearing colorful bandanas" },
+  { src: biggestAsset.url, alt: "Large black-and-white dog relaxing during bath time" },
+  { src: happiestBoyAsset.url, alt: "Happy fluffy white dog after grooming in a black polka-dot bandana" },
+  { src: happyBaileyAsset.url, alt: "Golden retriever puppy freshly groomed in an orange floral bandana" },
+  { src: smilingAsset.url, alt: "Smiling freshly groomed dog wearing a floral bandana" },
+  { src: dogDachshund, alt: "Long-haired dachshund freshly groomed", featured: true },
+  { src: waitingForMomAsset.url, alt: "Golden retriever relaxing by the garden door while waiting for mom", featured: true },
 ];
 
 export function Gallery() {
@@ -68,7 +82,7 @@ export function Gallery() {
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
           {photos.map((p, i) => {
-            const isBanner = i === photos.length - 1 && photos.length % 3 === 1;
+            const isBanner = p.featured === true;
             return (
             <Reveal
               key={i}
